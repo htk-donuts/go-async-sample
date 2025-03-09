@@ -1,9 +1,11 @@
-module github.com/hikarutakao/go-async-sample
+module github.com/htk-donuts/go-async-sample
 
 go 1.20
 
 require (
 	github.com/gin-gonic/gin v1.9.1
+	github.com/golang/mock v1.6.0
+	github.com/google/uuid v1.6.0
 )
 
 require (

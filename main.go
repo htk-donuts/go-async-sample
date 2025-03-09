@@ -2,31 +2,32 @@ package main
 
 import (
 	"log"
-	"net/http"
 
+	"github.com/gin-gonic/gin"
 	"github.com/htk-donuts/go-async-sample/infrastructure/repository"
 	"github.com/htk-donuts/go-async-sample/interface/controller"
 	"github.com/htk-donuts/go-async-sample/interface/presenter"
 	"github.com/htk-donuts/go-async-sample/usecase/interactor"
 )
 
-func setupServer() *http.ServeMux {
-	csvRepository := repository.NewCSVRepository()
+func setupRouter() *gin.Engine {
+	csvRepository := repository.NewProductRepository()
 	csvPresenter := presenter.NewCSVPresenter()
 	csvInteractor := interactor.NewCSVInteractor(csvRepository, csvPresenter)
 	csvController := controller.NewCSVController(csvInteractor)
 
-	mux := http.NewServeMux()
-	mux.HandleFunc("/generate-csv", csvController.HandleCSVGeneration)
+	router := gin.Default()
 
-	return mux
+	router.POST("/generate-csv", csvController.HandleCSVGeneration)
+
+	return router
 }
 
 func main() {
-	mux := setupServer()
+	router := setupRouter()
 	port := ":8090"
 	log.Printf("Server starting on port %s", port)
-	if err := http.ListenAndServe(port, mux); err != nil {
+	if err := router.Run(port); err != nil {
 		log.Fatal(err)
 	}
 }

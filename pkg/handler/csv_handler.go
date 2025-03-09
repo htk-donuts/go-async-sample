@@ -4,7 +4,7 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	"github.com/hikarutakao/go-async-sample/pkg/service"
+	"github.com/htk-donuts/go-async-sample/pkg/service"
 )
 
 // CSVHandler は CSV生成処理のためのハンドラです

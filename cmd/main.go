@@ -12,9 +12,9 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
-	"github.com/hikarutakao/go-async-sample/pkg/handler"
-	"github.com/hikarutakao/go-async-sample/pkg/middleware"
-	"github.com/hikarutakao/go-async-sample/pkg/service"
+	"github.com/htk-donuts/go-async-sample/pkg/handler"
+	"github.com/htk-donuts/go-async-sample/pkg/middleware"
+	"github.com/htk-donuts/go-async-sample/pkg/service"
 )
 
 func main() {
