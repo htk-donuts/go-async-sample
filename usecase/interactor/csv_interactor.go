@@ -24,12 +24,12 @@ func NewCSVInteractor(repo repository.ProductRepository, presenter presenter.CSV
 
 func (i *CSVInteractorImpl) RequestCsvGenerate(ctx *gin.Context) error {
 	// コンテキストをコピーして非同期処理でも使用できるようにする
-	// copyCtx := ctx.Copy()
+	copyCtx := ctx.Copy()
 
 	// 非同期でCSV生成処理を行う
 	go func() {
 		time.Sleep(5 * time.Second) // 重い処理をシミュレート
-		products := i.repo.List(ctx)
+		products := i.repo.List(copyCtx)
 		if err := i.presenter.OutputCSV(products); err != nil {
 			log.Printf("Error outputting CSV: %v", err)
 			return
