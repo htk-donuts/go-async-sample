@@ -5,7 +5,7 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	"github.com/htk-donuts/go-async-sample/usecase/interactor"
+	"github.com/htk-donuts/go-async-sample/internal/usecase/interactor"
 )
 
 type CSVController struct {

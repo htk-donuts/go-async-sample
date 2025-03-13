@@ -5,7 +5,7 @@ package repository
 import (
 	"context"
 
-	"github.com/htk-donuts/go-async-sample/domain/model"
+	"github.com/htk-donuts/go-async-sample/internal/domain/model"
 )
 
 type ProductRepository interface {

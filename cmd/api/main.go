@@ -4,10 +4,10 @@ import (
 	"log"
 
 	"github.com/gin-gonic/gin"
-	"github.com/htk-donuts/go-async-sample/infrastructure/repository"
-	"github.com/htk-donuts/go-async-sample/interface/controller"
-	"github.com/htk-donuts/go-async-sample/interface/presenter"
-	"github.com/htk-donuts/go-async-sample/usecase/interactor"
+	"github.com/htk-donuts/go-async-sample/internal/infrastructure/repository"
+	"github.com/htk-donuts/go-async-sample/internal/interface/controller"
+	"github.com/htk-donuts/go-async-sample/internal/interface/presenter"
+	"github.com/htk-donuts/go-async-sample/internal/usecase/interactor"
 )
 
 func setupRouter() *gin.Engine {

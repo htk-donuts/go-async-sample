@@ -4,7 +4,7 @@ import (
 	"encoding/csv"
 	"os"
 
-	"github.com/htk-donuts/go-async-sample/domain/model"
+	"github.com/htk-donuts/go-async-sample/internal/domain/model"
 )
 
 type CSVPresenterImpl struct{}

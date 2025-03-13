@@ -5,8 +5,8 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
-	"github.com/htk-donuts/go-async-sample/usecase/presenter"
-	"github.com/htk-donuts/go-async-sample/usecase/repository"
+	"github.com/htk-donuts/go-async-sample/internal/usecase/presenter"
+	"github.com/htk-donuts/go-async-sample/internal/usecase/repository"
 )
 
 type CSVInteractor interface {
