@@ -15,6 +15,7 @@ import (
 	"go.uber.org/mock/gomock"
 )
 
+// 一定時間待機させて非同期処理完了を待つテストケース。
 func TestRequestCsvGenerate(t *testing.T) {
 	// テストケースの定義
 	tests := []struct {
@@ -81,6 +82,7 @@ func TestRequestCsvGenerate(t *testing.T) {
 	}
 }
 
+// モック関数の呼び出し回数をカウントするテストケース。
 func TestRequestCsvGenerateCount(t *testing.T) {
 	const ( // モック関数の呼び出し回数をカウントするためのKeyとして利用する文字列
 		mockMethodProductRepositoryList string = "ProductRepositoryList"
